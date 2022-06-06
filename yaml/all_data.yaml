@@ -1,0 +1,9 @@
+train: /content/data/all/images/train/ 
+val:  /content/data/all/images/val/
+test: /content/data/all/images/test/
+
+# number of classes
+nc: 13
+
+# class names
+names: ["Tooth", "Metal (Implant)", "Metal", "Maxilla", "Mandible", "Inferior Alveolar Nerve", "Maxillary Sinus", "Plastic Restoration", "Endodontic Treatment", "Crown/Pontic", "Metallic Restoration", "Screw", "Supernumerary"]

@@ -1,0 +1,8 @@
+cd /Users/Anita/Documents/HMDA/TFM/CODE/dataset
+
+python coco_to_xml.py --coco_json=panoramic_xray_all_labels.json --coco_folder=data --save_xml=all_labels_xml --database_name=Database
+
+python coco_to_xml.py --coco_json=panoramic_xray_all_labels_but_tooth.json --coco_folder=data --save_xml=all_labels_but_tooth_xml --database_name=Database
+
+python coco_to_xml.py --coco_json=ppanoramic_xray_labels_Tooth.json --coco_folder=data --save_xml=tooth_labels_xml --database_name=Database
+
