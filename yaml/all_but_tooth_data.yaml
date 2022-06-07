@@ -1,6 +1,6 @@
-train: /content/data/all_but_tooth/images/train/ 
-val:  /content/data/all_but_tooth/images/val/
-test: /content/data/all_but_tooth/images/test/
+train: /content/drive/MyDrive/TFM/yoloV5_data/all_but_tooth/images/train/ 
+val:  /content/drive/MyDrive/TFM/yoloV5_data/all_but_tooth/images/val/
+test: /content/drive/MyDrive/TFM/yoloV5_data/all_but_tooth/images/det/
 
 # number of classes
 nc: 12

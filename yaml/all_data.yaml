@@ -1,6 +1,6 @@
-train: /content/data/all/images/train/ 
-val:  /content/data/all/images/val/
-test: /content/data/all/images/test/
+train: /content/drive/MyDrive/TFM/yoloV5_data/all/images/train/ 
+val:  /content/drive/MyDrive/TFM/yoloV5_data/all/images/val/
+test: /content/drive/MyDrive/TFM/yoloV5_data/all/images/det/
 
 # number of classes
 nc: 13

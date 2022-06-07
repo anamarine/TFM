@@ -1,0 +1,13 @@
+Tooth
+Metal_(Implant)
+Metal
+Maxilla
+Mandible
+Inferior_Alveolar_Nerve
+Maxillary_Sinus
+Plastic_Restoration
+Endodontic_Treatment
+Crown/Pontic
+Metallic_Restoration
+Screw
+Supernumerary

@@ -1,6 +1,6 @@
-train: /content/data/tooth/images/train/ 
-val:  /content/data/tooth/images/val/
-test: /content/data/tooth/images/test/
+train: /content/drive/MyDrive/TFM/yoloV5_data/tooth/images/train/ 
+val:  /content/drive/MyDrive/TFM/yoloV5_data/tooth/images/val/
+test: /content/drive/MyDrive/TFM/yoloV5_data/tooth/images/det/
 
 # number of classes
 nc: 1
