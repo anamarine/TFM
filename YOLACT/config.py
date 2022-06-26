@@ -206,7 +206,47 @@ xrays_dataset = dataset_base.copy({
                 41: 13}
 })
 
+xrays_tooth_dataset = dataset_base.copy({
+  'name': 'Panoramic Xrays - Tooth',
+  'train_info': '/content/drive/MyDrive/TFM/dataset_for_prep/labels_json/tooth_train.json',
+  'train_images': '/content/images',
+  'valid_info': '/content/drive/MyDrive/TFM/dataset_for_prep/labels_json/tooth_val.json',
+  'valid_images': '/content/images',
+  'class_names': ('Tooth'),#3
+  'label_map': {3: 1}
+})
 
+xrays_all_but_tooth_dataset = dataset_base.copy({
+  'name': 'Panoramic Xrays - All but tooth',
+  'train_info': '/content/drive/MyDrive/TFM/dataset_for_prep/labels_json/all_but_tooth_train.json',
+  'train_images': '/content/images',
+  'valid_info': '/content/drive/MyDrive/TFM/dataset_for_prep/labels_json/all_but_tooth_val.json',
+  'valid_images': '/content/images',
+  'class_names': ('Metal (Implant)', #4
+                  'Metal', #6 
+                  'Maxilla', #7
+                  'Mandible', #8
+                  'Inferior Alveolar Nerve', #9
+                  'Maxillary Sinus', #12
+                  'Plastic Restoration', #36
+                  'Endodontic Treatment', #37
+                  'Crown/Pontic', #38
+                  'Metallic Restoration', #39
+                  'Screw', #40
+                  'Supernumerary'), #41
+  'label_map': {4: 2, 
+                6: 3, 
+                7: 4,
+                8: 5,
+                9: 6, 
+                12: 7,
+                36: 8,
+                37: 9,
+                38: 10,
+                39: 11,
+                40: 12, 
+                41: 13}
+})
 
 # ----------------------- TRANSFORMS ----------------------- #
 
@@ -806,6 +846,27 @@ yolact_resnet50_xrays_config = yolact_resnet50_config.copy({
     'max_size': 512,
 })
 
+yolact_resnet50_xrays_tooth_config = yolact_resnet50_config.copy({
+    'name': 'yolact_plus_resnet50_xrays_tooth',
+    # Dataset stuff
+    'dataset': xrays_tooth_dataset,
+    'num_classes': len(xrays_tooth_dataset.class_names) + 1,
+
+    # Image Size
+    'max_size': 512,
+})
+
+yolact_resnet50_xrays_all_but_tooth_config = yolact_resnet50_config.copy({
+    'name': 'yolact_plus_resnet50_xrays_all_but_tooth',
+    # Dataset stuff
+    'dataset': xrays_all_but_tooth_dataset,
+    'num_classes': len(xrays_all_but_tooth_dataset.class_names) + 1,
+
+    # Image Size
+    'max_size': 512,
+})
+
+
 # ----------------------- YOLACT++ CONFIGS ----------------------- #
 
 yolact_plus_base_config = yolact_base_config.copy({
@@ -841,9 +902,8 @@ yolact_plus_resnet50_config = yolact_plus_base_config.copy({
         'use_pixel_scales': True,
         'preapply_sqrt': False,
         'use_square_anchors': False,
-    }),
+    })
 })
-
 
 # Default config
 cfg = yolact_base_config.copy()
